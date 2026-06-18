@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>大鱼缸展示游戏</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <aside class="panel" aria-label="鱼缸搭配面板">
+        <div class="brand">
+          <p>沉浸式鱼缸</p>
+          <h1>打造你的大鱼缸</h1>
+        </div>
+
+        <section class="control-group">
+          <div class="group-title">鱼缸</div>
+          <div class="option-grid" id="tankOptions"></div>
+        </section>
+
+        <section class="control-group">
+          <div class="group-title">鱼</div>
+          <div class="fish-list" id="fishOptions"></div>
+        </section>
+
+        <section class="control-group">
+          <div class="group-title">水景</div>
+          <div class="option-grid" id="decorOptions"></div>
+        </section>
+
+        <section class="control-group compact">
+          <label class="range-row">
+            <span>鱼群密度</span>
+            <input id="densityRange" type="range" min="8" max="28" value="16" />
+          </label>
+          <label class="range-row">
+            <span>水流</span>
+            <input id="currentRange" type="range" min="0" max="100" value="52" />
+          </label>
+          <label class="range-row">
+            <span>灯光</span>
+            <input id="lightRange" type="range" min="20" max="100" value="78" />
+          </label>
+        </section>
+
+        <div class="actions">
+          <button id="randomizeButton" type="button">随机搭配</button>
+          <button id="musicButton" type="button">海底音效</button>
+          <button id="showcaseButton" type="button">完成展示</button>
+        </div>
+      </aside>
+
+      <section class="stage">
+        <div class="topbar">
+          <div>
+            <p id="tankLabel">珊瑚海缸</p>
+            <strong id="moodLabel">柔和海蓝光 · 多层水波</strong>
+          </div>
+          <button id="exitShowcaseButton" type="button" hidden>返回编辑</button>
+        </div>
+        <canvas id="aquarium" width="1600" height="950" aria-label="实时鱼缸画面"></canvas>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+    <script src="assets/fish-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

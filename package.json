@@ -1,0 +1,11 @@
+{
+  "name": "realistic-aquarium-game",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node tools/serve.js",
+    "generate:fish": "node tools/generate-fish-assets.js",
+    "embed:fish": "node tools/embed-fish-assets.js",
+    "check": "node tools/check.js"
+  }
+}
